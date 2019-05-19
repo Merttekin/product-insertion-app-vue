@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="text-center">Ürün Ekleme Uygulaması</h1>
     <hr>
-    <NewProduct/>
+    <NewProduct @change="imageList"/>
     <br><br>
     <Progress/>
     <br><br>
@@ -24,15 +24,7 @@ import Products from './components/Products.vue';
     data() {
       return {
         imageList: [],
-        product : {
-            selectedImage: null
-        }
-      }
-    },
-    methods: {
-      onChange(e) {
-        const file = e.target.files[0];
-        this.product.selectedImage = URL.createObjectURL(file);
+        
       }
     },
     components:{
